@@ -1,10 +1,12 @@
-import { Sepolia } from "@usedapp/core";
+import { defineChain } from "@thirdweb";
 
-export const ROUTER_ADDRESS = "0xb744A692B346FFDdB6Ee3eD0E668164962B0e920";
+const bitrock = defineChain(7171);
+
+export const ROUTER_ADDRESS = "0x6789f48F8ED4506362592Ca58E9c160d624932B6";
 
 export const DAPP_CONFIG = {
-    readOnlyChainId: Sepolia.chainId,
+    readOnlyChainId: bitrock.chainId,
     readOnlyUrls: {
-        [Sepolia.chainId]: process.env.REACT_APP_ALCHEMY_API_KEY,
+        [bitrock.chainId]: process.env.REACT_APP_TW_API_KEY,
     },
 };
